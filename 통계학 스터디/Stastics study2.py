@@ -1,4 +1,4 @@
-ssimport numpy as np
+import numpy as np
 import scipy as sp
 
 fish_data = np.array([2,3,3,4,4,4,4,5,5,6])
