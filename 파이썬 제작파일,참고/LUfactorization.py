@@ -1,9 +1,9 @@
 import numpy as np
 
-matrixinitial = np.array([[2.0, 6.0, 2.0], [-3.0, -8.0, 0.0], [4.0, 9.0, 2.0]])
+matrix_initial = np.array([[2.0, 6.0, 2.0], [-3.0, -8.0, 0.0], [4.0, 9.0, 2.0]])
 
 global matrix
-matrix = matrixinitial
+matrix = matrix_initial
 global matrix1, matrix2
 
 u11 = matrix[0, 0]
@@ -23,7 +23,7 @@ matrix1 = [[1.0, 0.0, 0.0], [l21, 1.0, 0.0], [l31, l32, 1.0]]
 
 matrix2 = [[u11, u12, u13], [0.0, u22, u23], [0.0, 0.0, u33]]
 print("분해전")
-print(matrixinitial)
+print(matrix_initial)
 
 print("분해후")
 print("L")

@@ -33,12 +33,13 @@ leafs = [i for i in leaves[: len(trees)]]  # 공정마다 말단
 leaves[-1] = 0  # 마지막 공정은 반드시 해야하므로 bones에 속함
 bones = [ai - bi for ai, bi in zip(trees, leaves)]  # 상사와 하사가있는 반드시 그 타이밍에 수행할 일
 ma = max(bones)  # 리스트 컴프리헨션내에서 함수사용하지말것 시간지연
-bones_tofilled = [(ma - i) for i in bones]  # bones 의 여유공간
+bones_to_filled = [(ma - i) for i in bones]  # bones 의 여유공간
 
 leaves_temp = []
 bones_unfilled = []
 bank = 0
-for i, j in zip(leaves, bones_tofilled):
+j: object
+for i, j in zip(leaves, bones_to_filled):
     bank += i - j  # leaf의 여유분
     if bank < 0:  # j가 여유분 초과 값일때
         bones_unfilled.append(j - i)  # 못채운수만큼 기록
@@ -55,7 +56,7 @@ for reindex, j in enumerate(reversed(leaves_temp)):
         leaves_temp[index - 1] = leaves_temp[index - 1] + j
         leaves_temp[index] = 0
 leaves = [i for i in leaves_temp]
-bones_filled = [a - b for a, b in zip(bones_tofilled, bones_unfilled)]
+bones_filled = [a - b for a, b in zip(bones_to_filled, bones_unfilled)]
 bones_trans = [i + z for i, z in zip(bones, bones_filled)]
 
 leaf = 0
