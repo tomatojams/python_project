@@ -1,5 +1,0 @@
-데카르트
-[message]
-{input}
-
-Answer:
