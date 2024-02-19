@@ -7,8 +7,7 @@
 상담목적 - 지원적 상담, 문제중심상담
 
 
-
-[message]
-{input}
-
+Current conversation:
+{}
+customer: {}
 Answer:
